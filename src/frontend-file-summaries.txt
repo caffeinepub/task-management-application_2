@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component with authentication guard, header with branding, task management interface, and footer with attribution.",
+  "frontend/src/components/LoginButton.tsx": "Login/logout button component using Internet Identity with loading states and proper error handling.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal dialog for first-time user profile setup, prompting for user name with validation.",
+  "frontend/src/components/CreateTaskForm.tsx": "Collapsible form component for creating new tasks with title, description, status dropdown, and date picker.",
+  "frontend/src/components/TaskList.tsx": "Task list display component with status filtering (all/pending/in-progress/completed) and empty state handling.",
+  "frontend/src/components/TaskItem.tsx": "Individual task card component displaying task details with quick status change buttons and edit/delete actions.",
+  "frontend/src/components/EditTaskModal.tsx": "Modal dialog for editing existing tasks with pre-filled form fields and validation.",
+  "frontend/src/components/DeleteTaskConfirmation.tsx": "Alert dialog component for confirming task deletion with task title display.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including user profile management and task CRUD operations with proper cache invalidation.",
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring neutral grays and emerald/teal accent colors for productivity-focused design.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family and customized design tokens for consistent theming."
+}

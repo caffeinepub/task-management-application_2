@@ -1,0 +1,175 @@
+{
+  "kind": "build_request",
+  "title": "Build task management application with authentication and CRUD operations",
+  "projectName": "Task Manager",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement user authentication and authorization using Internet Identity integration",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "User authentication & authorization"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can authenticate using Internet Identity",
+        "Only authenticated users can access task management features",
+        "User sessions persist across page refreshes",
+        "Unauthenticated users see a login prompt"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create backend data model and API for tasks with fields: title, description, status (pending/in-progress/completed), due date, and created timestamp",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "CRUD operations for tasks"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Task data structure stores all required fields",
+        "Each task is associated with the authenticated user's principal",
+        "Tasks are persisted in stable memory across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement create task functionality allowing users to add new tasks with title, description, status, and due date",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "CRUD operations for tasks"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can submit a form to create new tasks",
+        "Form validates required fields before submission",
+        "New tasks appear immediately in the task list after creation",
+        "Success feedback is shown to the user"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement read/list task functionality displaying all tasks for the authenticated user with filtering by status",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "CRUD operations for tasks"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users see a list of all their tasks on the main screen",
+        "Tasks can be filtered by status (all/pending/in-progress/completed)",
+        "Task list shows title, status, and due date for each task",
+        "Empty state is shown when no tasks exist"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement update task functionality allowing users to edit task details and change task status",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "CRUD operations for tasks"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can click on a task to edit its details",
+        "Task status can be updated via dropdown or status buttons",
+        "Changes are persisted to the backend immediately",
+        "Updated tasks reflect changes in the UI without page refresh"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement delete task functionality allowing users to remove tasks",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "CRUD operations for tasks"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can delete tasks via a delete button",
+        "Confirmation prompt appears before deletion",
+        "Deleted tasks are removed from the UI immediately",
+        "Backend removes the task from storage"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement responsive design that adapts seamlessly to desktop, tablet, and mobile screen sizes",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Responsive design for web and mobile screens"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Layout adjusts appropriately for screens from 320px to 1920px wide",
+        "Navigation and forms remain usable on mobile devices",
+        "Touch targets are appropriately sized for mobile interaction",
+        "Content reflows without horizontal scrolling on small screens"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Apply a cohesive visual design system with a professional, productivity-focused aesthetic using clean typography, consistent spacing, and a modern color palette that avoids blue and purple combinations",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visual design follows a consistent theme throughout the application",
+        "Color palette emphasizes productivity and clarity",
+        "Typography hierarchy is clear and readable",
+        "Interactive elements have clear visual feedback states"
+      ]
+    }
+  ],
+  "constraints": [
+    "Must use Internet Identity for authentication (no third-party auth services)",
+    "Must use single-actor Motoko backend architecture",
+    "Must use React with TypeScript for frontend",
+    "Must use Tailwind CSS for styling",
+    "Frontend immutable paths must not be modified"
+  ],
+  "nonGoals": [
+    "Real-time updates using WebSockets (not supported by platform)",
+    "Integration with external task management services",
+    "Team collaboration features or shared tasks",
+    "Email notifications or push notifications",
+    "Task categories or tags beyond status field",
+    "File attachments or comments on tasks"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

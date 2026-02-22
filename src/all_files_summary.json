@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Main Motoko actor implementing task management CRUD operations with access control, including task creation, updates, deletion, and status-based queries. Enforces user and admin permissions for all operations.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (authentication, task CRUD, responsive design) to their source files, components, and test IDs with confidence levels.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of all frontend source files describing components for authentication, task management UI, forms, modals, and styling configuration.",
+  "frontend/index.css": "Tailwind CSS configuration with OKLCH color system defining light and dark theme variables for backgrounds, foregrounds, borders, and accent colors.",
+  "frontend/index.html": "HTML entry point for the Task Management Application with root div and module script reference to main.tsx.",
+  "frontend/src/App.tsx": "Main React application component with authentication guard, header with TaskFlow branding, conditional rendering of login prompt or task management interface, and profile setup modal.",
+  "frontend/src/components/CreateTaskForm.tsx": "Collapsible form component for creating tasks with title, description, status selector, and date picker, featuring validation and success/error toast notifications.",
+  "frontend/src/components/DeleteTaskConfirmation.tsx": "Alert dialog component for confirming task deletion with task title display and loading state during deletion operation.",
+  "frontend/src/components/EditTaskModal.tsx": "Modal dialog component for editing existing tasks with form fields for title, description, status, and due date, using React Hook Form and toast notifications.",
+  "frontend/src/components/LoginButton.tsx": "Authentication button component that toggles between login and logout states using Internet Identity, with loading states and error handling.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal dialog for first-time user profile setup that prompts for a name and cannot be dismissed until completed.",
+  "frontend/src/components/TaskItem.tsx": "Card component displaying individual task details with status badges, due date indicators, and action buttons for editing, deleting, and quick status changes.",
+  "frontend/src/components/TaskList.tsx": "Main task list view component with status filtering dropdown that displays tasks in a responsive grid layout with loading and empty states.",
+  "frontend/src/hooks/useActor.ts": "React Query hook that creates and manages the backend actor instance with authentication, handling identity changes and query invalidation.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context provider and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient lifecycle with configurable options.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for user profile and task management operations, including queries for fetching data and mutations for creating, updating, and deleting tasks with automatic cache invalidation.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables for light and dark themes, defining color schemes, spacing, and design tokens for the application's visual system.",
+  "frontend/src/main.tsx": "Application entry point that sets up React root with QueryClientProvider for data fetching and InternetIdentityProvider for authentication.",
+  "frontend/src/utils/urlParams.ts": "Utility functions for extracting, persisting, and managing URL parameters from both regular query strings and hash-based routing, with sessionStorage integration for parameter persistence.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining custom color system using OKLCH color space, container settings, typography, animations, and extended theme tokens for the design system.",
+  "project_state.json": "Project metadata tracking implemented features (authentication, CRUD operations, responsive design) and pending feature requests for a task management application with Internet Identity integration."
+}

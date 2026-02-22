@@ -1,0 +1,226 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Task Manager Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement user authentication UI using Internet Identity with profile setup flow",
+      "acceptanceCriteria": [
+        "Users can authenticate using Internet Identity",
+        "Only authenticated users can access task management features",
+        "User sessions persist across page refreshes",
+        "Unauthenticated users see a login prompt"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LoginButton.tsx",
+          "operation": "create",
+          "description": "Create login/logout button component using the authorization component's useInternetIdentity hook. Handle login, logout, and clear cached data on logout including user profile. Use the authorization component to manage authentication state."
+        },
+        {
+          "path": "frontend/src/components/ProfileSetupModal.tsx",
+          "operation": "create",
+          "description": "Create modal component to prompt users for their name on first login. Use the authorization component's saveCallerUserProfile method to save the profile. Implement proper loading state handling to prevent modal flash as shown in authorization component usage instructions."
+        },
+        {
+          "path": "frontend/src/hooks/useGetCallerUserProfile.ts",
+          "operation": "create",
+          "description": "Create custom hook to fetch current user profile using getCallerUserProfile from backend. Implement proper loading state management as specified in the authorization component usage to prevent profile setup modal flash."
+        },
+        {
+          "path": "frontend/src/components/AuthGuard.tsx",
+          "operation": "create",
+          "description": "Create authentication guard component that ensures users are logged in before accessing task management features. Show login prompt for unauthenticated users. Verify the authorization component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire AuthGuard component to protect task management routes. Integrate LoginButton into the application header. Add ProfileSetupModal that shows when user has no profile. Ensure proper authentication flow according to authorization component requirements."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement create task form with validation for title, description, status, and due date",
+      "acceptanceCriteria": [
+        "Users can submit a form to create new tasks",
+        "Form validates required fields before submission",
+        "New tasks appear immediately in the task list after creation",
+        "Success feedback is shown to the user"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CreateTaskForm.tsx",
+          "operation": "create",
+          "description": "Create task creation form component with fields for title, description, status dropdown (pending/in-progress/completed), and due date picker. Implement client-side validation for required fields. Call backend createTask method and show success feedback. Invalidate task list query to refresh UI immediately."
+        },
+        {
+          "path": "frontend/src/hooks/useCreateTask.ts",
+          "operation": "create",
+          "description": "Create mutation hook for creating tasks using backend createTask method. Handle success and error states, invalidate relevant queries on success to update task list."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire CreateTaskForm component into the main application view so authenticated users can access task creation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement task list view with status filtering displaying all user tasks",
+      "acceptanceCriteria": [
+        "Users see a list of all their tasks on the main screen",
+        "Tasks can be filtered by status (all/pending/in-progress/completed)",
+        "Task list shows title, status, and due date for each task",
+        "Empty state is shown when no tasks exist"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TaskList.tsx",
+          "operation": "create",
+          "description": "Create task list component that displays tasks with title, status, and due date. Include status filter dropdown (all/pending/in-progress/completed). Show empty state when no tasks exist. Fetch tasks using backend getAllTasks or getTasksByStatus methods based on selected filter."
+        },
+        {
+          "path": "frontend/src/components/TaskItem.tsx",
+          "operation": "create",
+          "description": "Create individual task item component displaying task title, status badge, and formatted due date. Include click handler to enable editing."
+        },
+        {
+          "path": "frontend/src/hooks/useGetTasks.ts",
+          "operation": "create",
+          "description": "Create query hook for fetching tasks using backend getAllTasks and getTasksByStatus methods. Support status-based filtering."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire TaskList component into the main application view as the primary content area for authenticated users."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement task editing UI allowing users to update task details and status",
+      "acceptanceCriteria": [
+        "Users can click on a task to edit its details",
+        "Task status can be updated via dropdown or status buttons",
+        "Changes are persisted to the backend immediately",
+        "Updated tasks reflect changes in the UI without page refresh"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/EditTaskModal.tsx",
+          "operation": "create",
+          "description": "Create modal component for editing task details with pre-filled form fields (title, description, status, due date). Call backend updateTask method on save and close modal. Invalidate task queries to refresh UI."
+        },
+        {
+          "path": "frontend/src/hooks/useUpdateTask.ts",
+          "operation": "create",
+          "description": "Create mutation hook for updating tasks using backend updateTask method. Handle success and error states, invalidate task list query on success."
+        },
+        {
+          "path": "frontend/src/components/TaskItem.tsx",
+          "operation": "modify",
+          "description": "Add click handler to open EditTaskModal with current task data. Include quick status change buttons that directly call update mutation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement task deletion with confirmation prompt",
+      "acceptanceCriteria": [
+        "Users can delete tasks via a delete button",
+        "Confirmation prompt appears before deletion",
+        "Deleted tasks are removed from the UI immediately",
+        "Backend removes the task from storage"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/DeleteTaskConfirmation.tsx",
+          "operation": "create",
+          "description": "Create confirmation dialog component that prompts user before deleting a task. Call backend deleteTask method on confirmation and close dialog."
+        },
+        {
+          "path": "frontend/src/hooks/useDeleteTask.ts",
+          "operation": "create",
+          "description": "Create mutation hook for deleting tasks using backend deleteTask method. Invalidate task list query on success to update UI immediately."
+        },
+        {
+          "path": "frontend/src/components/TaskItem.tsx",
+          "operation": "modify",
+          "description": "Add delete button that opens DeleteTaskConfirmation dialog with task details."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement responsive layout adapting to desktop, tablet, and mobile screens",
+      "acceptanceCriteria": [
+        "Layout adjusts appropriately for screens from 320px to 1920px wide",
+        "Navigation and forms remain usable on mobile devices",
+        "Touch targets are appropriately sized for mobile interaction",
+        "Content reflows without horizontal scrolling on small screens"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TaskList.tsx",
+          "operation": "modify",
+          "description": "Add Tailwind responsive classes to adjust task list layout for mobile (stacked cards), tablet (2 columns), and desktop (grid layout). Ensure proper spacing and touch targets for mobile."
+        },
+        {
+          "path": "frontend/src/components/CreateTaskForm.tsx",
+          "operation": "modify",
+          "description": "Add Tailwind responsive classes to make form fields stack vertically on mobile and display in optimized layout on larger screens. Ensure form inputs have appropriate touch target sizes."
+        },
+        {
+          "path": "frontend/src/components/EditTaskModal.tsx",
+          "operation": "modify",
+          "description": "Add Tailwind responsive classes to ensure modal adapts to screen size, with full-screen treatment on mobile and centered dialog on desktop."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add responsive container classes and adjust header/navigation layout to work on all screen sizes. Ensure LoginButton and main content areas adapt appropriately."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Apply cohesive productivity-focused design system using global styles and consistent theming",
+      "acceptanceCriteria": [
+        "Visual design follows a consistent theme throughout the application",
+        "Color palette emphasizes productivity and clarity",
+        "Typography hierarchy is clear and readable",
+        "Interactive elements have clear visual feedback states"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define productivity-focused color palette avoiding blue-purple combinations (use greens, oranges, grays). Set up typography hierarchy with clear font sizes and weights. Define consistent spacing scale and interactive state styles (hover, focus, active)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Customize Tailwind theme with productivity-focused color palette, typography scale, and spacing system. Define custom colors for task statuses (pending, in-progress, completed) using the approved color palette."
+        },
+        {
+          "path": "frontend/src/components/TaskItem.tsx",
+          "operation": "modify",
+          "description": "Apply consistent styling using the defined design system. Add status-specific color badges and ensure clear visual hierarchy for task information."
+        },
+        {
+          "path": "frontend/src/components/CreateTaskForm.tsx",
+          "operation": "modify",
+          "description": "Apply design system styling to form elements ensuring consistent spacing, typography, and visual feedback states for inputs and buttons."
+        },
+        {
+          "path": "frontend/src/components/EditTaskModal.tsx",
+          "operation": "modify",
+          "description": "Apply design system styling to modal ensuring consistent appearance with rest of application."
+        }
+      ]
+    }
+  ]
+}

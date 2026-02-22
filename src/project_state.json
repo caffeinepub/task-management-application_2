@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Task management web application for creating, updating, and tracking tasks with user authentication, CRUD operations, optional real-time updates, and responsive design",
+  "architectural_notes": [
+    "Full-stack application structure with API integration",
+    "Dynamic data handling for task management",
+    "WebSocket support for optional real-time updates"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-user-authentication-and-authorization-using-internet-identity-integration",
+      "title": "Implement user authentication and authorization using Internet Identity integration",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-create-task-functionality-allowing-users-to-add-new-tasks-with-title-description-status-and-due-date",
+      "title": "Implement create task functionality allowing users to add new tasks with title, description, status, and due date",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-read-list-task-functionality-displaying-all-tasks-for-the-authenticated-user-with-filtering-by-status",
+      "title": "Implement read/list task functionality displaying all tasks for the authenticated user with filtering by status",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-update-task-functionality-allowing-users-to-edit-task-details-and-change-task-status",
+      "title": "Implement update task functionality allowing users to edit task details and change task status",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-delete-task-functionality-allowing-users-to-remove-tasks",
+      "title": "Implement delete task functionality allowing users to remove tasks",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-responsive-design-that-adapts-seamlessly-to-desktop-tablet-and-mobile-screen-sizes",
+      "title": "Implement responsive design that adapts seamlessly to desktop, tablet, and mobile screen sizes",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-design-system-with-a-professional-productivity-focused-aesthetic-using-clean-typography-consistent-spacing-and-a-modern-color-palette-that-avoids-blue-and-purple-combinations",
+      "title": "Apply a cohesive visual design system with a professional, productivity-focused aesthetic using clean typography, consistent spacing, and a modern color palette that avoids blue and purple combinations",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "User authentication & authorization",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "CRUD operations for tasks",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Real-time updates using WebSockets (optional)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Responsive design for web and mobile screens",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create backend data model and API for tasks with fields: title, description, status (pending/in-progress/completed), due date, and created timestamp",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Task Management Application",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,242 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T04:35:29.632Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 8,
+    "implemented": 7,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Implement user authentication and authorization using Internet Identity integration",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LoginButton.tsx",
+          "frontend/src/components/ProfileSetupModal.tsx",
+          "frontend/src/hooks/useGetCallerUserProfile.ts",
+          "frontend/src/components/AuthGuard.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LoginButton.tsx",
+          "frontend/src/components/ProfileSetupModal.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Create backend data model and API for tasks with fields: title, description, status (pending/in-progress/completed), due date, and created timestamp",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Implement create task functionality allowing users to add new tasks with title, description, status, and due date",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CreateTaskForm.tsx",
+          "frontend/src/hooks/useCreateTask.ts",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CreateTaskForm.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Implement read/list task functionality displaying all tasks for the authenticated user with filtering by status",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/TaskList.tsx",
+          "frontend/src/components/TaskItem.tsx",
+          "frontend/src/hooks/useGetTasks.ts",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/TaskList.tsx",
+          "frontend/src/components/TaskItem.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Implement update task functionality allowing users to edit task details and change task status",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/EditTaskModal.tsx",
+          "frontend/src/hooks/useUpdateTask.ts",
+          "frontend/src/components/TaskItem.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/EditTaskModal.tsx",
+          "frontend/src/components/TaskItem.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Implement delete task functionality allowing users to remove tasks",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/DeleteTaskConfirmation.tsx",
+          "frontend/src/hooks/useDeleteTask.ts",
+          "frontend/src/components/TaskItem.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/DeleteTaskConfirmation.tsx",
+          "frontend/src/components/TaskItem.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Implement responsive design that adapts seamlessly to desktop, tablet, and mobile screen sizes",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/TaskList.tsx",
+          "frontend/src/components/CreateTaskForm.tsx",
+          "frontend/src/components/EditTaskModal.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/TaskList.tsx",
+          "frontend/src/components/CreateTaskForm.tsx",
+          "frontend/src/components/EditTaskModal.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Apply a cohesive visual design system with a professional, productivity-focused aesthetic using clean typography, consistent spacing, and a modern color palette that avoids blue and purple combinations",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/TaskItem.tsx",
+          "frontend/src/components/CreateTaskForm.tsx",
+          "frontend/src/components/EditTaskModal.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/TaskItem.tsx",
+          "frontend/src/components/CreateTaskForm.tsx",
+          "frontend/src/components/EditTaskModal.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/CreateTaskForm.tsx",
+    "frontend/src/components/DeleteTaskConfirmation.tsx",
+    "frontend/src/components/EditTaskModal.tsx",
+    "frontend/src/components/LoginButton.tsx",
+    "frontend/src/components/ProfileSetupModal.tsx",
+    "frontend/src/components/TaskItem.tsx",
+    "frontend/src/components/TaskList.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

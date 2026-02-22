@@ -1,0 +1,152 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-user-authentication-and-authorization-using-internet-identity-integration",
+      "featureTitle": "Implement user authentication and authorization using Internet Identity integration",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LoginButton.tsx",
+        "frontend/src/components/ProfileSetupModal.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-create-task-functionality-allowing-users-to-add-new-tasks-with-title-description-status-and-due-date",
+      "featureTitle": "Implement create task functionality allowing users to add new tasks with title, description, status, and due date",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CreateTaskForm.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-read-list-task-functionality-displaying-all-tasks-for-the-authenticated-user-with-filtering-by-status",
+      "featureTitle": "Implement read/list task functionality displaying all tasks for the authenticated user with filtering by status",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TaskItem.tsx",
+        "frontend/src/components/TaskList.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-update-task-functionality-allowing-users-to-edit-task-details-and-change-task-status",
+      "featureTitle": "Implement update task functionality allowing users to edit task details and change task status",
+      "files": [
+        "frontend/src/components/EditTaskModal.tsx",
+        "frontend/src/components/TaskItem.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-delete-task-functionality-allowing-users-to-remove-tasks",
+      "featureTitle": "Implement delete task functionality allowing users to remove tasks",
+      "files": [
+        "frontend/src/components/DeleteTaskConfirmation.tsx",
+        "frontend/src/components/TaskItem.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-responsive-design-that-adapts-seamlessly-to-desktop-tablet-and-mobile-screen-sizes",
+      "featureTitle": "Implement responsive design that adapts seamlessly to desktop, tablet, and mobile screen sizes",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CreateTaskForm.tsx",
+        "frontend/src/components/EditTaskModal.tsx",
+        "frontend/src/components/TaskList.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-visual-design-system-with-a-professional-productivity-focused-aesthetic-using-clean-typography-consistent-spacing-and-a-modern-color-palette-that-avoids-blue-and-purple-combinations",
+      "featureTitle": "Apply a cohesive visual design system with a professional, productivity-focused aesthetic using clean typography, consistent spacing, and a modern color palette that avoids blue and purple combinations",
+      "files": [
+        "frontend/src/components/CreateTaskForm.tsx",
+        "frontend/src/components/EditTaskModal.tsx",
+        "frontend/src/components/TaskItem.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
